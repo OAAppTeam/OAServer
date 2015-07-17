@@ -2,6 +2,7 @@ __author__ = 'Justin'
 
 from django.http import HttpResponse
 from OAServer.models import TestModel
+from OAServer.db_manage import to_json
 import json
 
 def post_only(func):
@@ -16,8 +17,7 @@ def post_only(func):
     return wrapped_f
 
 # Create your views here.
-@post_only
+# @post_only
 def test_view(request):
     posts = TestModel.objects.all()
-    j = {"aa":"test"}
-    return HttpResponse(json.dumps(j))
+    return HttpResponse(to_json(posts))

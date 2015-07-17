@@ -59,7 +59,7 @@ WSGI_APPLICATION = 'OAServer.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'oaapp',
+        'NAME': 'oaserver',
         'USER': 'oa',
         'PASSWORD': '123',
     }
