@@ -4,7 +4,7 @@ from django.http import HttpResponse
 from OAServer.models import TestModel
 from OAServer.db_manage import to_json
 import json
-
+#haha
 def post_only(func):
     """ Ensures a method is post only """
     def wrapped_f(request):
