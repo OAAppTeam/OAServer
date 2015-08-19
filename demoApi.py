@@ -6,7 +6,6 @@
 """
 
 import os
-
 from vnctpmd import MdApi
 from vnctptd import TdApi
 from eventEngine import *

@@ -72,7 +72,9 @@ class EventEngine:
     #----------------------------------------------------------------------
     def __run(self):
         """引擎运行"""
+        
         while self.__active == True:
+            
             try:
                 event = self.__queue.get(block = True, timeout = 1)  # 获取事件的阻塞时间设为1秒
                 self.__process(event)
@@ -111,7 +113,8 @@ class EventEngine:
         
         # 启动计时器，计时器事件间隔默认设定为1秒
         self.__timer.start(1000)
-    
+        
+        
     #----------------------------------------------------------------------
     def stop(self):
         """停止引擎"""
